@@ -128,6 +128,9 @@ export default function BreakoutGame() {
     const keys: Record<string, boolean> = {};
     const handleKeyDown = (e: KeyboardEvent) => {
       keys[e.key] = true;
+      if (['ArrowLeft', 'ArrowRight', ' '].includes(e.key)) {
+        e.preventDefault();
+      }
       if (e.key === ' ' && !ballLaunched && gameStarted && !gameOver) {
         ballLaunched = true;
         ballVY = -Math.abs(ballVY);

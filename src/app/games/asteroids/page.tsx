@@ -53,7 +53,12 @@ export default function AsteroidsGame() {
     }
 
     const keys: Record<string, boolean> = {};
-    const handleKeyDown = (e: KeyboardEvent) => { keys[e.key] = true; };
+    const handleKeyDown = (e: KeyboardEvent) => { 
+      keys[e.key] = true;
+      if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', ' '].includes(e.key)) {
+        e.preventDefault();
+      }
+    };
     const handleKeyUp = (e: KeyboardEvent) => { keys[e.key] = false; };
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('keyup', handleKeyUp);
