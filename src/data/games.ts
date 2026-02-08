@@ -516,6 +516,16 @@ export const GAMES: Game[] = [
     difficulty: 'medium',
     implemented: true,
   },
+  {
+    id: 'style-mirror',
+    title: 'Style Mirror',
+    description: 'Transform your webcam in real-time with AI style filters',
+    category: 'ai-enhanced',
+    patterns: [PATTERNS.RANDOMNESS],
+    usesDecart: true,
+    difficulty: 'easy',
+    implemented: true,
+  },
 
   // === STRATEGY & UNIQUE (41-54) ===
   {
@@ -660,4 +670,8 @@ export function getNeocortexGames(): Game[] {
 
 export function getGameById(id: string): Game | undefined {
   return GAMES.find(g => g.id === id);
+}
+
+export function getDecartGames(): Game[] {
+  return GAMES.filter(g => g.usesDecart);
 }
