@@ -19,9 +19,40 @@ const STYLES = [
 ];
 
 const tutorial = {
-  overview: 'Transform your webcam feed in real-time using Decart AI. Pick a style and watch yourself transform instantly!',
-  promptFlow: ['Get Decart token', 'Access webcam', 'Connect to Decart realtime', 'Apply style transformations'],
-  codeHighlights: ['WebRTC real-time video', 'Decart Mirage model', 'Live style switching'],
+  overview: 'Transform your webcam feed in real-time using Decart AI\'s Mirage model. This game showcases the power of real-time AI video transformation - pick any style and watch yourself transform instantly with zero latency. The AI processes each video frame and applies artistic style transfer in real-time via WebRTC.',
+  howToPlay: [
+    'Click "Start Camera" to enable your webcam',
+    'Grant browser permission to access your camera',
+    'Wait for the Decart AI connection to establish',
+    'Click any style button to transform your video feed',
+    'Switch between styles instantly - no delay!',
+    'Click "Stop" when finished to disconnect',
+  ],
+  winCondition: 'This is a creative sandbox - there\'s no win condition! Experiment with different styles and see yourself transformed by AI.',
+  promptFlow: [
+    'Request ephemeral API token from server (/api/decart-token)',
+    'Get camera stream with resolution matching Mirage model specs',
+    'Initialize Decart SDK client with ephemeral token',
+    'Establish WebRTC connection to Decart real-time servers',
+    'Stream video frames to Decart, receive transformed frames back',
+    'Dynamically update style prompt when user clicks new style',
+  ],
+  codeHighlights: [
+    'Ephemeral token generation for secure client-side API access',
+    'WebRTC peer connection for sub-100ms latency video streaming',
+    'Decart Mirage V2 model for real-time style transfer',
+    'Dynamic prompt switching without reconnection',
+    'Proper cleanup of media streams and WebRTC connections',
+    'Error handling with user-friendly feedback',
+  ],
+  techStack: [
+    'React 19',
+    'Next.js 16',
+    'Decart SDK',
+    'WebRTC',
+    'MediaDevices API',
+    'TypeScript',
+  ],
 };
 
 export default function StyleMirrorGame() {

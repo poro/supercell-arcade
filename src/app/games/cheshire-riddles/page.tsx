@@ -8,19 +8,39 @@ import { chat, CHARACTERS, getCharacterGreeting } from '@/lib/neocortex';
 const game = getGameById('cheshire-riddles')!;
 
 const tutorial = {
-  overview: 'The Cheshire Cat poses riddles for you to solve. Using Neocortex AI, the cat generates unique riddles each game and evaluates your answers with cryptic, in-character responses. Race against time to solve as many as possible!',
+  overview: 'The Cheshire Cat poses riddles for you to solve. Using Neocortex AI, the cat generates unique riddles each game and evaluates your answers with cryptic, in-character responses. Race against time to solve as many as possible! Each correct answer earns points and bonus time.',
+  howToPlay: [
+    'Click "Enter Wonderland" to start the game',
+    'Read the riddle posed by the Cheshire Cat carefully',
+    'Type your answer in the input field and press Enter or click Answer',
+    'The cat will evaluate your response in character',
+    'Correct answers give +10 points and +15 seconds bonus time',
+    'Keep solving riddles until time runs out!',
+  ],
+  winCondition: 'Score as many points as possible before the 2-minute timer expires. Each riddle solved correctly adds bonus time!',
   promptFlow: [
-    'Initialize Neocortex with Cheshire Cat character ID',
-    'Request a riddle with context about game state and difficulty',
-    'Player submits answer via text input',
-    'Send answer to Neocortex for in-character evaluation',
-    'Parse response to determine if answer is correct, adjust score',
+    'Initialize Neocortex with Cheshire Cat character ID (pre-defined personality)',
+    'Request a riddle with context about current game state and difficulty level',
+    'Player submits answer via text input form',
+    'Send answer to Neocortex for in-character evaluation with conversation history',
+    'Parse response for RIGHT/CORRECT keywords to determine success',
+    'Update score, apply time bonus, and request next riddle',
   ],
   codeHighlights: [
-    'Real-time AI conversation via Neocortex API',
-    'Character-consistent responses (mischievous, cryptic)',
-    'Progressive difficulty based on player success',
-    'Timer pressure adds urgency to puzzle-solving',
+    'Real-time AI conversation via Neocortex API with streaming responses',
+    'Character-consistent responses maintaining the mischievous, cryptic Cheshire Cat persona',
+    'Conversation history preserved for contextual riddle generation',
+    'Timer management with bonus time rewards for correct answers',
+    'Fallback riddle system for API failures ensuring gameplay continuity',
+    'Regex-based answer evaluation parsing AI responses for success indicators',
+  ],
+  techStack: [
+    'React 19',
+    'Next.js 16',
+    'Neocortex AI',
+    'TypeScript',
+    'Tailwind CSS',
+    'Game State Hooks',
   ],
 };
 
