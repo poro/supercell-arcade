@@ -4,7 +4,8 @@
 
 > 🎁 **Donated to the Tools Category** for the Supercell AI Game Hackathon. Free to use, modify, and build upon!
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-supercell--arcade.vercel.app-brightgreen)](https://supercell-arcade.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-supercell--arcade.game--agents.com-brightgreen)](https://supercell-arcade.game-agents.com)
+[![Mirror](https://img.shields.io/badge/Mirror-supercell--arcade.vercel.app-blue)](https://supercell-arcade.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 🕹️ What is this?
@@ -47,7 +48,7 @@ npm run dev
 npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to play!
+Open [http://localhost:3000](http://localhost:3000) to play locally, or visit the live site at **[supercell-arcade.game-agents.com](https://supercell-arcade.game-agents.com)**!
 
 ## 📁 Project Structure
 
