@@ -250,7 +250,7 @@ export default function PacmanGame() {
 
       // === DRAW ===
       ctx.fillStyle = '#000';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, canvas!.width, canvas!.height);
 
       // Draw maze
       for (let y = 0; y < MAZE.length; y++) {
@@ -347,7 +347,7 @@ export default function PacmanGame() {
       // Power mode indicator
       if (powerMode > 0) {
         ctx.fillStyle = `rgba(0, 100, 255, ${powerMode / 300 * 0.3})`;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillRect(0, 0, canvas!.width, canvas!.height);
       }
 
       animationId = requestAnimationFrame(loop);
